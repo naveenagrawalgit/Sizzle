@@ -26,15 +26,21 @@ function Navbar() {
             
             { user 
             ? 
-            <div><button className="rounded hover:pointer-events-auto" onClick={handleLogout}>Logout</button></div> 
+            <div className='flex gap-x-4' >
+              <Link to='/add-recipe' > <button>
+                Add Recipe</button> </Link>
+              
+              <button className="rounded hover:pointer-events-auto" onClick={handleLogout}>Logout</button></div> 
             : 
-            <><Link to='/login'>
+            <>
+            <Link to='/login'>
             <button className=''>Login</button>
             </Link>
 
             <Link to="/register" >
             <button>Register</button>
-            </Link></>}
+            </Link>
+            </>}
 
         </div>
         </div>
