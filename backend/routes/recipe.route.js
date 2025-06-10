@@ -19,7 +19,9 @@ router.post("/",protect, async (req, res)=>{
                 instructions,
                 category,
                 photoUrl,
-                cookingTime
+                cookingTime,
+                createdBy: req.user._id,
+
             })
 
             res.status(201).json(recipe)
@@ -68,7 +70,7 @@ router.put("/:id", protect, async (req,res)=>{
         instructions,
         category,
         photoUrl,
-        cookingTime
+        cookingTime,
     } = req.body;
 
     try {
@@ -120,3 +122,4 @@ router.delete("/:id",protect, async (req,res)=>{
 })
 
 export default router
+
