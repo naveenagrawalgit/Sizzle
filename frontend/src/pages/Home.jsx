@@ -9,7 +9,6 @@ function Home() {
   const [recipes,setRecipes] = useState([]);
   const [category,setCategory] = useState('All');
 
-
   const categories = [
     'All',
     'Breakfast',
