@@ -20,6 +20,10 @@ const recipeSchema = new mongoose.Schema({
         type: String,
         required:true,
     },
+    photoUrl: {
+      type: String,
+      required: true,
+    },
     cookingTime:{
         type:Number,
         required:true,
